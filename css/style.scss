@@ -2,144 +2,6 @@
 # This is the Front Matter block for Jekyll to properly read this file
 ---
 
-/**
- * CONTENTS
- *
- * VARIABLES
- * Colors................Color variables.
- * Widths and Padding....Width and padding variables.
- * Breakpoints...........Breakpoint variables.
- * Border................Border variables.
- * Animation.............Animation variables.
- *
- * RESET
- * Border Box............Add border box to all elements.
- * Margin/Padding/Border.Zero out margin/padding/border on certain elements
- * List Styles...........No list styles. Zero out margin/padding.
- * Table.................Initial Table Styles.
- * Display Block.........Initialize header, footer, nav, section, article, hgroup, figure as display: block.
- * Legend................Initialize legend as display: none.
- *
- * BASE
- * Body..................Body base styles.
- * Links.................Links base styles. Includes styles for image within links.
- * Paragraph.............Paragraph base styles.
- * Responsive Media......Set height: auto and width: 100% for images, objects, and video responsiveness.
- * Video.................Video base styles.
- * Heading 1.............Heading 1 base styles.
- * Heading 2.............Heading 2 base styles.
- * Heading 3.............Heading 3 base styles.
- * Heading 4.............Heading 4 base styles.
- * Links within h2/h3....Link styles within heading 2 and heading 3.
- * Blockquote............Blockquote base styles.
- * Small Text............Small text base styles.
- * Input.................Input base styles.
- * Input Placeholder.....Input placeholder text base styles.
- * Code Block............Code block base styles.
- * Preformatted Text.....Preformatted text base styles.
- *
- * LAYOUT
- * 2-up Grid.............Grid layout 1up on small screens to 2 up on larger screens.
- * 3-up Grid.............Grid layout 1 up, to 2 up, to 3 up.
- * 4-up Grid.............Grid layout 1 up, to 2up, to 4 up.
- * Split Grid............Grid split 50/50 layout.
- * Featured Grid Item....Featured split grid item.
- * Secondary Grid Item...Secondary split grid item.
- * 2 Column Grid Layout..2 Column Grid Layout on larger screens
- * Sidebar...............Block of content becomes sidebar on larger screens
- *
- * CONTENT
- * Content...............Content of the 2 column grid layout. Includes elements within .content.
- *
- * HEADER
- * Header................Header styles.
- *
- * LOGO
- * Logo..................Logo styles.
- * Atom Logo Span........The span wrapper of the atom logo
- * Atom Logo Footer......Footer logo styles.
- *
- * NAVIGATION
- * Navigation............Navigation wrapper
- * Nav Button............Nav Button Toggle.
- * Nav List..............Nav List.
- * Nav Item..............Nav List Item.
- * Nav Link..............Links within Nav.
- *
- * MAIN
- * Main..................Main content section except for homepage.
- *
- * BANNER
- * Banner................Wrapper containing the main heading of the page .
- * Banner Title..........Heading within the banner wrapper.
- * Banner Feature........Featured banner (on the homepage).
- *
- * DOCUMENTATION NAVIGATION
- * Doc Nav Section.......Section where the documentation navigation items live.
- * Doc Nav Title.........Title of the doc nav section.
- * Text..................Text helpers.
- *
- * BUTTONS
- * Buttons................General button styles.
- * Button Group...........Group of buttons' styles.
- *
- * TABS
- * Tabs Wrapper...........Wrapper where tabs live.
- * Tabs List..............List of tabs.
- * Tabs Link..............Link within tabs list item.
- *
- * TILE
- * Tile...................Block of content. Includes variations.
- *
- * TILE LIST
- * Tile List..............List of tiles.
- *
- * SECTION
- * Section Title..........Title of section.
- * Section Body...........Body of section.
- * Section Header.........Wrapper inside section where section-inner and intro live.
- * Section Inner..........Inner wrapper of section header.
- * Reversed Section.......Section that is in reverse order of default section class.
- * Section Edition........Section for Edition of Downloads.
- *
- * INTRO
- * Intro..................Styles for intro class.
- *
- * GUTS
- * Guts...................Block of content within documentation pages.
- *
- * BLOCKHEAD
- * Blockhead..............Block of images and text used for pattern lab credits.
- *
- * LINK LIST
- * Link List..............List of links.
- * Link List Item.........Item of the link list.
- * Link List Link.........Link within link list item.
- *
- * DOWNLOADS LIST
- * Downloads List.........List of downloads on downloads page.
- * Downloads List Item....List item of downloads list.
- * Downloads List Link....Link within downloads list item.
- *
- * FOOTER
- * Footer.................Footer wrapper styles.
- * Footer Nav.............Footer navigation styles.
- * Footer Note............Note of text within the footer.
- *
- * JAVASCRIPT ACTIVATED STYLES
- * JS Activated Styles....Various styles that act differently when javascript is running (.js class added)
- *
- * DOCUMENTATION HOME
- * Docs Index.............docs-index class styles.
- *
- * ANIMATIONS
- * Atom Logo Rotation.....Animation of atom logo.
- *
- */
-
-
-
-
 
  /*------------------------------------*\
      #VARIABLES
@@ -281,7 +143,7 @@ body {
  * Links
  */
 a {
-	color: $color-gray-50;
+	color: #D35400;
 	text-decoration: none;
     transition: all $anim-speed-quick ease;
 
@@ -384,9 +246,9 @@ h2 a, h3 a {
  */
 hr {
     display: block;
-	height: 40px;
+	height: 5px;
 	border: 0;
-    background: $color-gray-05;
+    background: #D35400;
     margin: 0 0 1rem;
 }
 
@@ -530,6 +392,67 @@ pre {
 .g-split__feature {
 
     background: $color-gray-87;
+    color: $color-gray-13;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    &--light {
+	    background: $color-gray-75;
+    }
+
+    @media all and (min-width: 40em) {
+        width: 50%;
+    }
+}
+
+/**
+ * Featured Grid Item 2
+ */
+.g-split__feature2 {
+
+    background: #48C9B0;
+    color: $color-black;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    &--light {
+	    background: $color-gray-75;
+    }
+
+    @media all and (min-width: 40em) {
+        width: 50%;
+    }
+}
+
+/**
+ * Featured Grid Item 3
+ */
+.g-split__feature3 {
+
+    background: #F5B041;
+    color: $color-black;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    &--light {
+	    background: $color-gray-75;
+    }
+
+    @media all and (min-width: 40em) {
+        width: 50%;
+    }
+}
+
+/**
+ * Featured Grid Item 4
+ */
+.g-split__feature4 {
+
+    background: #48C9B0;
     color: $color-gray-13;
     display: flex;
     align-items: center;
@@ -1075,7 +998,7 @@ main {
 		 * Second Button Within Button Group
 		 */
 	    &:nth-of-type(2) {
-	        background: url(../assets/atoms-scales.png);
+	        background: #48C9B0;
 	        color: $color-gray-10;
 
 	        &:hover, &:focus {
@@ -1087,7 +1010,7 @@ main {
 		 * Third Button Within Button Group
 		 */
 	    &:nth-of-type(3) {
-	        background: $color-gray-50;
+	        background: #F5B041;
 
 	        &:hover, &:focus {
 	            color: $color-gray-05;
@@ -1188,14 +1111,15 @@ main {
 \*------------------------------------*/
 
 .tile {
-    background: $color-gray-05;
+    background: #48C9B0;
     padding: 2rem;
 
 	/**
 	 * Alternative Tile Style 1
 	 */
     &--alt {
-        background: $color-gray-10;
+        background: #A3E4D7;
+		padding: 2rem;
     }
 
 	/**
@@ -1204,12 +1128,28 @@ main {
     &--alt2 {
         background: $color-white;
     }
+	
+		/**
+	 * Alternative Tile Style 1
+	 */
+    &--alt3 {
+        background: $color-gray-15;
+		padding: 2rem;
+    }
+
+	/**
+	 * Alternative Tile Style 2
+	 */
+    &--alt4 {
+        background: $color-gray-05;
+		padding: 2rem
+    }
 
 	/**
 	 * Alternative Tile Style Fancy
 	 */
     &--fancy {
-        background: url(../assets/bg-organism-pattern.svg);
+        background: #F5B041;
     }
 
     /**
@@ -1227,8 +1167,25 @@ main {
     }
 }
 
+.tile_blue{
+	padding: 0rem;
+	background: #48C9B0;
+	font-weight: bold;
+	margin: 0.5em 0 0.5em
+}
+
+.tile_yellow{
+	padding: 0rem;
+	background: #F5B041;
+	font-weight: bold;
+	margin: 0.5em 0 0.5em
+}
 
 
+.tile_space{
+	padding: 0em 0 0em;
+	margin: 0.5em 0 0.5em
+}
 
 
 /*------------------------------------*\
@@ -1271,6 +1228,7 @@ main {
 		padding: 0;
 	}
 }
+
 
 /**
  * Section Header
@@ -1906,40 +1864,4 @@ main {
 
 .u-margin-bottom-large {
 	margin-bottom: 2rem !important;
-}
-
-
-
-
-
-/*------------------------------------*\
-    #ANIMATIONS
-\*------------------------------------*/
-/**
- * Atom Logo Rotations
- */
-@-webkit-keyframes rotation {
-	0% { -webkit-transform: rotate(0deg); }
-	100% { -webkit-transform: rotate(360deg); }
-}
-
-@-moz-keyframes rotation {
-	0% { -moz-transform: rotate(0deg); }
-	100% { -moz-transform: rotate(360deg); }
-}
-@-o-keyframes rotation {
-	0% { -o-transform: rotate(0deg); }
-	100% { -o-transform: rotate(360deg); }
-}
-@keyframes rotation {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
-}
-
-
-@keyframes pulseIn {
-	0% { background: $color-gray-15; }
-	15% { background: $color-gold; }
-	60% { background: $color-gold; }
-	100% { background: $color-gray-15; }
 }
